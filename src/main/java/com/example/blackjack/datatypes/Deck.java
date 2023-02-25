@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 public class Deck {
-    private final List<Card> cards;
+    private final ArrayList<Card> cards;
 
     public Deck(){
         //Initialize Arraylist of all cards in order
@@ -20,6 +20,14 @@ public class Deck {
 
     public void shuffleDeck(){
         Collections.shuffle(cards);
+    }
+
+    public Card getCard(){
+        return this.cards.get(0);
+    }
+
+    public void removeCard(){
+        this.cards.remove(0);
     }
 
 
