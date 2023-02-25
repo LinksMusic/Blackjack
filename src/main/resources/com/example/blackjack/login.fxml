@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="257.0" layoutY="25.0" text="Starting Balance" />
+      <Button layoutX="254.0" layoutY="247.0" mnemonicParsing="false" text="Start Game" />
+      <Label fx:id="balanceLabel" layoutX="286.0" layoutY="42.0" text="x€" />
+      <ImageView fx:id="twoValueChipImageView" fitHeight="76.0" fitWidth="76.0" layoutX="254.0" layoutY="99.0">
+         <image>
+            <Image url="@../../../OneDrive%20-%20Privat/OneDrive/two_euro_chip.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="oneValueChipImageView" fitHeight="76.0" fitWidth="76.0" layoutX="116.0" layoutY="99.0">
+         <image>
+            <Image url="@../../../OneDrive%20-%20Privat/OneDrive/ein_euro_chip.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="fiveValueChipImageView" fitHeight="76.0" fitWidth="76.0" layoutX="387.0" layoutY="99.0">
+         <image>
+            <Image url="@../../../OneDrive%20-%20Privat/OneDrive/five_euro_chip.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>
