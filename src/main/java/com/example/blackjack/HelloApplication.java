@@ -15,19 +15,27 @@ import java.util.Arrays;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        //FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+        //Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        //stage.setTitle("Hello!");
+        //stage.setScene(scene);
+        //stage.show();
+
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(),320,240);
+        stage.setTitle("Login");
         stage.setScene(scene);
         stage.show();
     }
 
     public static void main(String[] args) {
-        //launch();
+        launch();
+
         ArrayList<Chip> list = new ArrayList<>();
         list.add(Chip.TEN);
-        Player p = new Player("Dummy",list);
+        Player p = new Player(list);
         p.hit();
         p.hit();
+
     }
 }

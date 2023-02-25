@@ -5,25 +5,14 @@ import com.example.blackjack.datatypes.enums.Chip;
 import java.util.ArrayList;
 
 public class Player {
-    private String name;
     private int points;
     private ArrayList<Chip> balance;
     private ArrayList<Card> hand = new ArrayList<>();
     private ArrayList<Chip> bet = new ArrayList<>();
     private final Deck deck = new Deck();
 
-    public Player(String name, ArrayList<Chip> balance){
-        this.name = name;
+    public Player(ArrayList<Chip> balance){
         this.balance = balance;
-    }
-
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getPoints() {
