@@ -5,26 +5,37 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import java.lang.String?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Label layoutX="257.0" layoutY="25.0" text="Starting Balance" />
-      <Button layoutX="254.0" layoutY="247.0" mnemonicParsing="false" text="Start Game" />
-      <Label fx:id="balanceLabel" layoutX="286.0" layoutY="42.0" text="x€" />
-      <ImageView fx:id="twoValueChipImageView" fitHeight="76.0" fitWidth="76.0" layoutX="254.0" layoutY="99.0">
-         <image>
-            <Image url="@../../../OneDrive%20-%20Privat/OneDrive/two_euro_chip.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="oneValueChipImageView" fitHeight="76.0" fitWidth="76.0" layoutX="116.0" layoutY="99.0">
-         <image>
-            <Image url="@../../../OneDrive%20-%20Privat/OneDrive/ein_euro_chip.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="fiveValueChipImageView" fitHeight="76.0" fitWidth="76.0" layoutX="387.0" layoutY="99.0">
-         <image>
-            <Image url="@../../../OneDrive%20-%20Privat/OneDrive/five_euro_chip.png" />
-         </image>
-      </ImageView>
-   </children>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+      prefWidth="600.0" stylesheets="@stylesheets/login.css" xmlns="http://javafx.com/javafx/19"
+      xmlns:fx="http://javafx.com/fxml/1">
+   <styleClass>
+      <String fx:value="pane"/>
+   </styleClass>
+   <Label layoutX="257.0" layoutY="25.0" stylesheets="@stylesheets/login.css" text="Starting Balance">
+      <styleClass>
+         <String fx:value="label"/>
+      </styleClass>
+   </Label>
+   <Button id="startGameButton" fx:id="startGameButton" layoutX="254.0" layoutY="247.0" mnemonicParsing="false"
+           stylesheets="@stylesheets/login.css" text="Start Game">
+      <styleClass>
+         <String fx:value="button"/>
+      </styleClass>
+   </Button>
+   <Label fx:id="balanceLabel" layoutX="286.0" layoutY="42.0" stylesheets="@stylesheets/login.css" text="x€">
+      <styleClass>
+         <String fx:value="label"/>
+      </styleClass>
+   </Label>
+   <ImageView fx:id="twoValueChipImageView" fitHeight="76.0" fitWidth="76.0" layoutX="254.0" layoutY="99.0">
+      <Image url="@pictures/two_euro_chip.png"/>
+   </ImageView>
+   <ImageView fx:id="oneValueChipImageView" fitHeight="76.0" fitWidth="76.0" layoutX="116.0" layoutY="99.0">
+      <Image url="@pictures/one_euro_chip.png"/>
+   </ImageView>
+   <ImageView fx:id="fiveValueChipImageView" fitHeight="76.0" fitWidth="76.0" layoutX="387.0" layoutY="99.0">
+      <Image url="@pictures/five_euro_chip.png"/>
+   </ImageView>
 </Pane>
