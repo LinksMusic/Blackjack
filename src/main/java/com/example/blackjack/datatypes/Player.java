@@ -8,9 +8,9 @@ public class Player {
     private String name;
     private int points;
     private ArrayList<Chip> balance;
-    private ArrayList<Card> hand;
-    private ArrayList<Chip> bet;
-    private String status;
+    private ArrayList<Card> hand = new ArrayList<>();
+    private ArrayList<Chip> bet = new ArrayList<>();
+    private final Deck deck = new Deck();
 
     public Player(String name, ArrayList<Chip> balance){
         this.name = name;
@@ -32,6 +32,23 @@ public class Player {
 
     public void setPoints(int points) {
         this.points = points;
+    }
+
+    public void hit(){
+        deck.shuffleDeck();
+        hand.add(deck.getCard());
+        isMoveValid();
+    }
+
+    public void stand(){
+    }
+
+    private boolean isMoveValid(){
+        boolean valid = true;
+        for(Card c: hand){
+            System.out.println(c.getRank());
+        }
+        return valid;
     }
 
 }
