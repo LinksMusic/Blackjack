@@ -1,8 +1,10 @@
 package com.example.blackjack;
 
+import com.example.blackjack.datatypes.Card;
 import com.example.blackjack.datatypes.Deck;
 import com.example.blackjack.datatypes.Player;
 import com.example.blackjack.datatypes.enums.Chip;
+import com.example.blackjack.management.Game;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -29,13 +31,16 @@ public class HelloApplication extends Application {
     }
 
     public static void main(String[] args) {
-        launch();
-
-        ArrayList<Chip> list = new ArrayList<>();
-        list.add(Chip.TEN);
-        Player p = new Player(list);
-        p.hit();
-        p.hit();
+        //launch();
+        ArrayList<Chip> balance = new ArrayList<>();
+        balance.add(Chip.ONE);
+        balance.add(Chip.FIVE);
+        Player player = new Player(balance);
+        Game.getInstance(player);
+        Game.hit();
+        Game.hit();
+        Game.hit();
+        Game.hit();
 
     }
 }

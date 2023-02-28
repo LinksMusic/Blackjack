@@ -1,7 +1,8 @@
 package com.example.blackjack.datatypes.enums;
 
 public enum Rank {
-    ACE(1,11),
+    ACEONE(1),
+    ACEELEVEN(11),
     TWO(2),
     THREE(3),
     FOUR(4),
@@ -16,16 +17,9 @@ public enum Rank {
     KING(10);
 
     private final int value;
-    private final int softValue;
-
-    Rank(int value, int softValue) {
-        this.value = value;
-        this.softValue = softValue;
-    }
 
     Rank(int value) {
         this.value = value;
-        this.softValue = 0;
     }
 
 }

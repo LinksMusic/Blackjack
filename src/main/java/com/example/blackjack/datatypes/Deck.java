@@ -22,11 +22,11 @@ public class Deck {
         Collections.shuffle(cards);
     }
 
-    public Card getCard(){
+    public Card getFirstCard(){
         return this.cards.get(0);
     }
 
-    public void removeCard(){
+    public void removeFirstCard(){
         this.cards.remove(0);
     }
 

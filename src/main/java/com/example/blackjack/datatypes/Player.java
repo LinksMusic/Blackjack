@@ -23,21 +23,12 @@ public class Player {
         this.points = points;
     }
 
-    public void hit(){
-        deck.shuffleDeck();
-        hand.add(deck.getCard());
-        isMoveValid();
+    public void addCardToHand(Card card){
+        hand.add(card);
     }
 
-    public void stand(){
-    }
-
-    private boolean isMoveValid(){
-        boolean valid = true;
-        for(Card c: hand){
-            System.out.println(c.getRank());
-        }
-        return valid;
+    public ArrayList<Card> getHand(){
+        return this.hand;
     }
 
 }
